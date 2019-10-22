@@ -1,19 +1,31 @@
 {
     "name": "@fuzzco/module-base",
     "version": "1.0.0",
-    "description": "Boilerplate for a Fuzzco JS module.",
-    "main": "dist/index.js",
+    "description": "Your module",
+    "main": "dist/module-base.cjs.js",
+    "module": "dist/module-base.esm.js",
+    "browser": "dist/module-base.umd.js",
     "scripts": {
-        "build": "mkdir -p dist && NODE_ENV=production babel src | terser --source-map --output ./dist/index.js",
+        "dev": "rollup -c -w",
+        "build": "NODE_ENV=production rollup -c",
         "prepublish": "npm run build"
     },
-    "keywords": [],
-    "author": "",
+    "repository": "https://github.com/fuzzco/module-base",
+    "keywords": [
+        "css",
+        "grid",
+        "column"
+    ],
+    "author": "Sander Moolin, Fuzzco",
     "license": "MIT",
     "devDependencies": {
-        "@babel/cli": "^7.4.4",
-        "@babel/core": "^7.4.4",
-        "@babel/preset-env": "^7.4.4",
-        "terser": "^3.17.0"
+        "@ampproject/rollup-plugin-closure-compiler": "^0.10.0",
+        "@babel/core": "^7.6.4",
+        "lodash": "^4.17.15",
+        "rollup": "^1.25.1",
+        "rollup-plugin-babel": "^4.3.3",
+        "rollup-plugin-livereload": "^1.0.4",
+        "rollup-plugin-serve": "^1.0.1",
+        "rollup-plugin-terser": "^5.1.2"
     }
 }

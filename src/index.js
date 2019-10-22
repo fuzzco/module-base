@@ -1,1 +1,3 @@
-export default val => console.log(val)
+export default function() {
+    console.log('running!')
+}
