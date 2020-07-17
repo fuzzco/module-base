@@ -21,7 +21,7 @@
     "devDependencies": {
         "@ampproject/rollup-plugin-closure-compiler": "^0.10.0",
         "@babel/core": "^7.6.4",
-        "lodash": "^4.17.15",
+        "lodash": "^4.17.19",
         "rollup": "^1.25.1",
         "rollup-plugin-babel": "^4.3.3",
         "rollup-plugin-livereload": "^1.0.4",
